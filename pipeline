@@ -1,25 +1,20 @@
-def workspace;
-node
-{
-  stage("checkout")
-  {
-  checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'b4c0dfb5-4ea2-4ebf-b5d9-4f5c57f11210', url: 'https://github.com/mamatha0228/mamatha.git']]])
-  workspace pwd;
-  }
-  stage("static code analysis")
-  {
-  echo "static code analysis"
-  }
-  stage("build now")
-  {
-  echo "build now"
-  }
-  stage("unit testing")
-  {
-  echo "unit testing"
-  }
-  stage("delivery")
-  {
-  echo "delivery"
-  }
+pipeline {
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+                // 
+            }
+        }
+        stage('Test') { 
+            steps {
+                // 
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                // 
+            }
+        }
+    }
 }
