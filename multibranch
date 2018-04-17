@@ -7,10 +7,12 @@ node {
         echo "build"
     }
     stage('Test') { 
-        echo "test"
+
+        echo "test" 
+        
     }
     stage('Deploy') { 
         echo "deploy"
     }
 }
-}
+
